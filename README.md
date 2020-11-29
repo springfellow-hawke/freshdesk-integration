@@ -1,7 +1,8 @@
 # freshdesk-integration
 
-Creating the DB users:
-Startup a Docker isntance for MariaDB locally. The following command will startup with shared folders
+## Setup the DB container and users required
+
+Startup a Docker instance for MariaDB locally. The following command will startup with shared folders
 so that we have persistent storage for restart.
 
 $ docker run -e TZ=Africa/Johannesburg --restart unless-stopped \
@@ -19,3 +20,5 @@ GRANT ALL PRIVILEGES ON crm . * TO 'crm'@'%';
 CREATE DATABASE fresh;
 CREATE USER 'fresh'@'%' IDENTIFIED BY 'helpmyasb';
 GRANT ALL PRIVILEGES ON fresh . * TO 'fresh'@'%';
+
+## 
